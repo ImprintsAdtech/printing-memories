@@ -1,0 +1,73 @@
+# Use PHP5.6 as default
+
+
+#RewriteEngine on
+RewriteCond %{HTTP_HOST} !^\printmysnap\.com
+RewriteRule (.*) http://printmysnap.com/$1 [R=301,L]
+
+RewriteRule ^login?$ login.php
+RewriteRule ^signup?$ signup.php
+RewriteRule ^about-us?$ about.php
+RewriteRule ^blog?$ blog.php
+RewriteRule ^sps-values?$ sps-values.php
+RewriteRule ^guarantee?$ guarantee.php
+RewriteRule ^help?$ help.php
+RewriteRule ^shipping-info?$ shipping-info.php
+RewriteRule ^contact-us?$ contact.php
+RewriteRule ^app?$ app.php
+RewriteRule ^careers?$ careers.php
+RewriteRule ^squares?$ squares.php
+RewriteRule ^forgot-password?$ forgot-password.php
+RewriteRule ^my-profile?$ my-profile.php
+RewriteRule ^change-password?$ change-password.php
+RewriteRule ^privacy-policy?$ privacy-policy.php
+RewriteRule ^product?$ product.php
+RewriteRule ^freeproduct?$ freeproduct.php
+RewriteRule ^select-size?$ select-size.php
+RewriteRule ^upload-photos?$ upload-photos.php
+RewriteRule ^cart?$ cart.php
+RewriteRule ^terms-condition?$ terms-condition.php
+RewriteRule ^my-orders?$ my-orders.php
+RewriteRule ^payment?$ payment.php
+RewriteRule ^success?$ success.php
+RewriteRule ^why-print?$ why-print.php
+
+
+RewriteRule ^checkout?$ checkout.php
+
+RewriteRule blog/(.*)/(.*)$ /blog-details.php?cateId=$1&blogId=$2
+RewriteRule blog/(.*)/(.*)/$ /blog-details.php?blogId=$1
+
+RewriteRule ^product/([^/]*)$ /freeproduct-details.php?productid=$1 [L]
+RewriteRule ^product/([^/]*)/$ /freeproduct-details.php?productid=$1 [L]
+
+RewriteRule ^freeupload-photos/([^/]*)$ /freeupload-photos.php?productid=$1 [L]
+RewriteRule ^freeupload-photos/([^/]*)/$ /freeupload-photos.php?productid=$1 [L]
+
+
+RewriteRule ^premium_product/([^/]*)$ /premiumProduct-detail.php?productId=$1 [L]
+RewriteRule ^premium_product/([^/]*)/$ /premiumProduct-detail.php?productId=$1 [L]
+
+
+RewriteRule ^premiumUpload/([^/]*)$ /premiumUpload-photos.php?productId=$1 [L]
+RewriteRule ^premiumUpload/([^/]*)/$ /premiumUpload-photos.php?productId=$1 [L]
+
+
+RewriteRule ^snapbook_product/([^/]*)$ /photoBook-details.php?productid=$1 [L]
+RewriteRule ^snapbook_product/([^/]*)/$ /photoBook-details.php?productid=$1 [L]
+
+
+RewriteRule ^snapbook_upload/([^/]*)$ /photobook_upload.php?productid=$1 [L]
+RewriteRule ^snapbook_upload/([^/]*)/$ /photobook_upload.php?productid=$1 [L]
+
+RewriteRule ^photostrip_product/([^/]*)$ /photostrip-details.php?productid=$1 [L]
+RewriteRule ^photostrip_product/([^/]*)/$ /photostrip-details.php?productid=$1 [L]
+
+
+RewriteRule ^photostrip_upload/([^/]*)$ /photostrip_upload.php?productid=$1 [L]
+RewriteRule ^photostrip_upload/([^/]*)/$ /photostrip_upload.php?productid=$1 [L]
+
+RewriteRule ^order-detail/([^/]*)$ /my-order-detail.php?orderid=$1 [L]
+RewriteRule ^order-detail/([^/]*)/$ /my-order-detail.php?orderid=$1 [L]
+
+
